@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.12.5](https://github.com/MMRIZE/MMM-CalendarExt3/compare/v1.12.4...v1.12.5) (2026-04-28)
+
+
+### Fixed
+
+* **node_helper:** send correct functions on reconnect ([9dea2c4](https://github.com/MMRIZE/MMM-CalendarExt3/commit/9dea2c444c0cc0b492af6bc66d8d8cdfc9553019)), closes [#261](https://github.com/MMRIZE/MMM-CalendarExt3/issues/261)
+
 ## [1.12.4](https://github.com/MMRIZE/MMM-CalendarExt3/compare/v1.12.3...v1.12.4) (2026-04-26)
 
 
