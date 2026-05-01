@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/MMRIZE/MMM-CalendarExt3/compare/v2.0.1...v2.0.2) (2026-05-01)
+
+
+### Fixed
+
+* **closure:** restore _functionsReady gating in startup ([eea9834](https://github.com/MMRIZE/MMM-CalendarExt3/commit/eea98348bd2fcd6a420cb15b763b677c44066b8f))
+
+
+### Chores
+
+* update devDependencies ([78b8393](https://github.com/MMRIZE/MMM-CalendarExt3/commit/78b839332202532762c5e62238c4e9d828bd1aa3))
+
 ## [2.0.1](https://github.com/MMRIZE/MMM-CalendarExt3/compare/v2.0.0...v2.0.1) (2026-05-01)
 
 
