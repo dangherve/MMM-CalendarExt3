@@ -207,7 +207,13 @@ Module.register("MMM-CalendarExt3", {
     this.popoverTimer = null
 
     this._ready = false
-    this.sendSocketNotification("CX3_REGISTER", { config: this.config, identifier: this.identifier })
+    // Safety timeout: if node_helper never responds (e.g. socket issues),
+    // resolve after 5s so the module still renders.
+    const _functionsRestored = new Promise(resolve => {
+      this._functionsReady = resolve
+      setTimeout(resolve, 5000)
+    })
+    this.sendSocketNotification("CX3_REGISTER", { identifier: this.identifier })
 
     const _moduleLoaded = new Promise((resolve, reject) => {
       import(`/${this.file("CX3_Shared/CX3_shared.mjs")}`).then(m => {
@@ -224,7 +230,7 @@ Module.register("MMM-CalendarExt3", {
       this._domReady = resolve
     })
 
-    Promise.allSettled([_moduleLoaded, _domCreated]).then(() => {
+    Promise.allSettled([_moduleLoaded, _domCreated, _functionsRestored]).then(() => {
       this._ready = true
       this.library.prepareMagic()
       setTimeout(() => {
