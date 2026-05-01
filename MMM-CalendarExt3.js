@@ -447,7 +447,7 @@ Module.register("MMM-CalendarExt3", {
     dom.innerHTML = ""
     dom.classList.add("bodice", `CX3_${this.activeConfig.instanceId}`, "CX3")
     if (this.activeConfig.fontSize) dom.style.setProperty("--fontsize", this.activeConfig.fontSize)
-    if (!this.library?.loaded) {
+    if (!this.library?.loaded || !this._ready) {
       Log.warn("[CX3] Module is not prepared yet, wait a while.")
       return dom
     }
